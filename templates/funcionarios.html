@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionários</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Lista de Funcionários</h1>
+            <nav>
+                <a href="{{ url_for('index') }}">Início</a>
+                <a href="{{ url_for('cadastro_livro') }}">Cadastro de Livro</a>
+                <a href="{{ url_for('cadastro_cliente') }}">Cadastro de Cliente</a>
+                <a href="{{ url_for('cadastro_funcionario') }}">Cadastro de Funcionário</a>
+                <a href="{{ url_for('emprestimo') }}">Empréstimo</a>
+                <a href="{{ url_for('livros_emprestados') }}">Livros Emprestados</a>
+                <a href="{{ url_for('livros') }}">Livros</a>
+                <a href="{{ url_for('clientes') }}">Clientes</a>
+                <a href="{{ url_for('funcionarios') }}">Funcionários</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="form-section">
+            <h1>Lista de Funcionários</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Cargo</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for funcionario in funcionarios %}
+                    <tr>
+                        <td>{{ funcionario.FuncionarioID }}</td>
+                        <td>{{ funcionario.Nome }}</td>
+                        <td>{{ funcionario.Cargo }}</td>
+                        <td>{{ funcionario.Email }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a href="{{ url_for('index') }}" class="btn">Voltar para o Acervo</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Biblioteca Comunitária de Porecatu. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

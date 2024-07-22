@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Cadastro de Novo Funcionário</h1>
+            <nav>
+                <a href="{{ url_for('index') }}">Início</a>
+                <a href="{{ url_for('cadastro_livro') }}">Cadastro de Livro</a>
+                <a href="{{ url_for('cadastro_cliente') }}">Cadastro de Cliente</a>
+                <a href="{{ url_for('cadastro_funcionario') }}">Cadastro de Funcionário</a>
+                <a href="{{ url_for('emprestimo') }}">Empréstimo</a>
+                <a href="{{ url_for('livros_emprestados') }}">Livros Emprestados</a>
+                <a href="{{ url_for('livros') }}">Livros</a>
+                <a href="{{ url_for('clientes') }}">Clientes</a>
+                <a href="{{ url_for('funcionarios') }}">Funcionários</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="form-section">
+            <h1>Cadastro de Novo Funcionário</h1>
+            <form action="{{ url_for('cadastro_funcionario') }}" method="post">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="cargo">Cargo:</label>
+                    <input type="text" id="cargo" name="cargo">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit" class="btn">Cadastrar</button>
+            </form>
+            <a href="{{ url_for('index') }}" class="btn btn-back">Voltar para o Acervo</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Biblioteca Comunitária de Porecatu. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

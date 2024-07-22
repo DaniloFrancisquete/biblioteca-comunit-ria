@@ -1,0 +1,327 @@
+/* Reset de Estilos Básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos Globais */
+body {
+    background-color: #0d1117; /* Cor de fundo escura */
+    color: #c9d1d9; /* Cor do texto clara */
+    line-height: 1.6;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #e2e8f0; /* Tom mais claro para títulos */
+}
+
+a {
+    color: #58a6ff; /* Azul neon para links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos do Header */
+header {
+    width: 250px;
+    background: linear-gradient(135deg, #1f2937, #3b82f6); /* Gradiente de azul escuro para azul claro */
+    color: #fff;
+    padding: 0;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 20px 0;
+}
+
+.sidebar h1 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #e2e8f0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav a {
+    color: #cbd5e1; /* Cor dos links */
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #58a6ff; /* Cor de destaque no hover */
+}
+
+/* Estilos do Main */
+main {
+    margin-left: 250px; /* Ajusta a margem esquerda para dar espaço para a sidebar */
+    padding: 20px;
+    width: calc(100% - 250px); /* Ajusta a largura para preencher o espaço restante */
+}
+
+/* Seção Hero */
+.hero {
+    background: url('https://source.unsplash.com/1600x900/?library,books') no-repeat center center/cover;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #3b82f6; /* Azul brilhante para botões */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2563eb; /* Azul mais escuro para o hover */
+}
+
+/* Seção Info */
+.info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    background: #1f2937; /* Fundo escuro para caixas de informação */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.info-box h3 {
+    margin-bottom: 10px;
+    color: #e2e8f0;
+}
+
+/* Estilos do Footer */
+footer {
+    background: #0f172a; /* Escuro com um tom mais azulado */
+    color: #c9d1d9;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Estilos de Responsividade */
+@media (max-width: 768px) {
+    .info-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    main {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
+
+/* Estilos específicos para a página de Cadastro de Cliente */
+
+/* Seção do Formulário */
+.form-section {
+    background-color: #1f2937; /* Fundo escuro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    max-width: 900px;
+    margin: 20px auto; /* Centraliza horizontalmente */
+}
+
+/* Título do Formulário */
+.form-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #e2e8f0; /* Cor clara */
+    text-align: center;
+}
+
+/* Estilos do Formulário */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #e2e8f0; /* Cor clara */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #3b82f6; /* Azul claro */
+    border-radius: 5px;
+    background-color: #0d1117; /* Fundo escuro */
+    color: #c9d1d9; /* Cor do texto clara */
+}
+
+.form-group input:focus {
+    border-color: #58a6ff; /* Azul neon ao focar */
+    outline: none;
+}
+
+/* Botões */
+.btn {
+    background-color: #3b82f6; /* Azul brilhante */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px 0;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #2563eb; /* Azul mais escuro para hover */
+}
+
+.btn-back {
+    background-color: #4b5563; /* Cinza escuro */
+}
+
+.btn-back:hover {
+    background-color: #374151; /* Cinza mais escuro para hover */
+}
+
+/* Estilos do Footer */
+footer {
+    background: #0f172a; /* Escuro com tom mais azulado */
+    color: #c9d1d9;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* Estiliza a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+thead {
+    background-color: #3b82f6; /* Azul brilhante para o cabeçalho */
+    color: #fff; /* Cor do texto no cabeçalho */
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #4b5563; /* Borda cinza escura */
+    text-align: left;
+}
+
+thead th {
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #2d3748; /* Fundo alternado para linhas pares */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #1f2937; /* Fundo alternado para linhas ímpares */
+}
+
+tbody tr:hover {
+    background-color: #3b82f6; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+
+/* Seção de Relatório */
+.report-section {
+    padding: 20px;
+    background-color: #0d1117; /* Cor de fundo escura */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.report h1 {
+    color: #e2e8f0;
+    margin-bottom: 20px;
+}
+
+.report-item {
+    background-color: #1f2937; /* Fundo escuro para cada item */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.report-item h2 {
+    color: #e2e8f0;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.report-item p {
+    color: #c9d1d9;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.report-item strong {
+    color: #58a6ff; /* Azul neon para destaques */
+}

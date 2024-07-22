@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Comunitária</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="sidebar">
+            <h1>Biblioteca Comunitária</h1>
+            <nav>
+                <a href="{{ url_for('index') }}">Início</a>
+                <a href="{{ url_for('cadastro_livro') }}">Cadastro de Livro</a>
+                <a href="{{ url_for('cadastro_cliente') }}">Cadastro de Cliente</a>
+                <a href="{{ url_for('cadastro_funcionario') }}">Cadastro de Funcionário</a>
+                <a href="{{ url_for('emprestimo') }}">Empréstimo</a>
+                <a href="{{ url_for('livros_emprestados') }}">Livros Emprestados</a>
+                <a href="{{ url_for('livros') }}">Livros</a>
+                <a href="{{ url_for('clientes') }}">Clientes</a>
+                <a href="{{ url_for('funcionarios') }}">Funcionários</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Bem-vindo à Biblioteca Comunitária de Porecatu!</h2>
+            <p>Explore nosso acervo digital, faça empréstimos de livros, e participe de atividades culturais e educativas.</p>
+            <a href="{{ url_for('cadastro_livro') }}" class="btn">Cadastrar Livro</a>
+            <a href="{{ url_for('emprestimo') }}" class="btn">Empréstimo de Livros</a>
+        </section>
+        <section class="info">
+            <div class="info-box">
+                <h3>Sobre Nós</h3>
+                <p>Oferecemos um espaço acolhedor e recursos educativos para a comunidade local. Nossa biblioteca é um centro de aprendizado e cultura.</p>
+            </div>
+            <div class="info-box">
+                <h3>Missão</h3>
+                <p>Promover o acesso ao conhecimento e fomentar o hábito da leitura através de um acervo diversificado e atividades culturais.</p>
+            </div>
+            <div class="info-box">
+                <h3>Contato</h3>
+                <p>Estamos aqui para ajudar! Entre em contato conosco para mais informações sobre nossos serviços e atividades.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Biblioteca Comunitária de Porecatu. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
