@@ -33,6 +33,7 @@
                         <th>Nome</th>
                         <th>Cargo</th>
                         <th>Email</th>
+                        <th>Ação</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,6 +43,11 @@
                         <td>{{ funcionario.Nome }}</td>
                         <td>{{ funcionario.Cargo }}</td>
                         <td>{{ funcionario.Email }}</td>
+                        <td>
+                            <form action="{{ url_for('excluir_funcionario', funcionario_id=funcionario.FuncionarioID) }}" method="POST" style="display:inline;">
+                                <button class="btn" type="submit" onclick="return confirm('Tem certeza que deseja excluir este funcionário?');">Excluir</button>
+                            </form>
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>

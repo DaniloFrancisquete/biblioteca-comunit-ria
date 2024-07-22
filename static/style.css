@@ -34,6 +34,7 @@ header {
     width: 250px;
     background: linear-gradient(135deg, #1f2937, #3b82f6); /* Gradiente de azul escuro para azul claro */
     color: #fff;
+    text-align: center;
     padding: 0;
     position: fixed;
     height: 100%;
@@ -83,6 +84,7 @@ main {
     margin-left: 250px; /* Ajusta a margem esquerda para dar espaço para a sidebar */
     padding: 20px;
     width: calc(100% - 250px); /* Ajusta a largura para preencher o espaço restante */
+    position: absolute;
 }
 
 /* Seção Hero */

@@ -120,6 +120,30 @@ def livros_emprestados():
     conn.close()
     return render_template('livros_emprestados.html', emprestimos=emprestimos_atualizados)
 
+@app.route('/excluir_livro/<int:livro_id>', methods=['POST'])
+def excluir_livro(livro_id):
+    conn = get_db_connection()
+    conn.execute('DELETE FROM Livros WHERE LivroID = ?', (livro_id,))
+    conn.commit()
+    conn.close()
+    return redirect(url_for('livros'))
+
+@app.route('/excluir_cliente/<int:cliente_id>', methods=['POST'])
+def excluir_cliente(cliente_id):
+    conn = get_db_connection()
+    conn.execute('DELETE FROM Clientes WHERE ClienteID = ?', (cliente_id,))
+    conn.commit()
+    conn.close()
+    return redirect(url_for('clientes'))
+
+@app.route('/excluir_funcionario/<int:funcionario_id>', methods=['POST'])
+def excluir_funcionario(funcionario_id):
+    conn = get_db_connection()
+    conn.execute('DELETE FROM Funcionarios WHERE FuncionarioID = ?', (funcionario_id,))
+    conn.commit()
+    conn.close()
+    return redirect(url_for('funcionarios'))
+
 
 @app.route('/clientes')
 def clientes():

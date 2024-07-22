@@ -30,11 +30,15 @@
                 {% if livros %}
                     {% for livro in livros %}
                         <div class="report-item">
+                            <p><strong>ID do Livro:</strong> {{ livro.LivroID }}</p>
                             <h2>{{ livro.Titulo }}</h2>
                             <p><strong>Autor:</strong> {{ livro.Autor }}</p>
                             <p><strong>Ano de Publicação:</strong> {{ livro.AnoPublicacao }}</p>
                             <p><strong>Gênero:</strong> {{ livro.Genero }}</p>
                             <p><strong>Quantidade Disponível:</strong> {{ livro.Quantidade }}</p>
+                            <form action="{{ url_for('excluir_livro', livro_id=livro.LivroID) }}" method="POST" style="display:inline;">
+                                <button class="btn" type="submit" onclick="return confirm('Tem certeza que deseja excluir este livro?');">Excluir</button>
+                            </form>
                         </div>
                     {% endfor %}
                 {% else %}

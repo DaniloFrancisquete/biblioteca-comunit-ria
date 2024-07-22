@@ -33,6 +33,7 @@
                     <th>Email</th>
                     <th>Telefone</th>
                     <th>Data de Cadastro</th>
+                    <th>Ação</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,6 +44,11 @@
                     <td>{{ cliente.Email }}</td>
                     <td>{{ cliente.Telefone }}</td>
                     <td>{{ cliente.DataCadastro }}</td>
+                    <td>
+                        <form action="{{ url_for('excluir_cliente', cliente_id=cliente.ClienteID) }}" method="POST" style="display:inline;">
+                            <button class="btn" type="submit" onclick="return confirm('Tem certeza que deseja excluir este cliente?');">Excluir</button>
+                        </form>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
